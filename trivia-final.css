@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 30px;
+}
+
+button, #user-name, label, #next-11, #next-12, #results-btn {
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+#welcome-text {
+    text-transform: capitalize;
+}
+
+.container {
+    text-align: center;
+}
+
+#user-name-btn, #next-11, #next-12, #results-btn, #boton-next-1, #boton-next-2, #boton-next-3 {
+    margin-top: 15px;
+}
+
+#intro, #welcome, #question-11, #question-12, #question-13, #results, #pregunta-1, #pregunta-2, #pregunta-3, #results-animals {
+    
+    margin: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.bg-got {
+    background-image: url('../images/jon-snow-got-small.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* #question-11, #question-12, #question-13, #results {
+    background-image: url(jon-snow-got-small.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+} */

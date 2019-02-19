@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="trivia-final.css">
+        <title>Trivia Game</title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="intro">
+                <h1>Trivia Game</h1>
+                <p>¿Crees saberlo todo? ¡Te ponemos a prueba!</p>
+                <form name="user">
+                    <input type="text" id="user-name" autocomplete="off" placeholder="Tu nombre aquí" required>
+                </form>
+                <button id="user-name-btn">¡A jugar!</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="welcome" style="display: none;">
+                <h2 id="welcome-text"></h2>
+                <p>Elige una categoría:</p>
+                <button id="red-wedding">Game of Thrones</button>
+                <button id="winter-is-coming" style="margin-left: 15px;">Animales</button>
+            </div>
+        </div>
+        <div class="container got">
+            <div id="question-11" style="display: none">
+                <img src="https://static.accessonline.com/uploads/189099.jpg" width="300px" alt="Boda Roja - Juego de Tronos"/>
+                <p>¿Quiénes traicionaron a los Stark durante la <strong style="color: red">Boda Roja</strong>?</p>
+                <form id="form-question-11" onsubmit="return false">
+                    <input type="radio" name="question1" id="tyrion" value="wrong" required>
+                    <label for="tyrion">Tyrion Lannister y Brienne Tarth</label><br/>
+                    <input type="radio" name="question1" id="frey" value="correct" class="okidoki" required>
+                    <label for="frey">Walder Frey y Roose Bolton</label><br/>
+                    <input type="radio" name="question1" id="bolton" value="wrong" required>
+                    <label for="bolton">Ramsay Bolton y Robert Baratheon</label>
+                </form>
+                <button id="next-11">Siguiente</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="question-12" style="display: none">
+                <img src="http://www.nerdinfinite.com/wp-content/uploads/bfi_thumb/game-of-thrones-the-red-wedding-negan-lucille-myr911mlm1lwsb34xjudy0vq6p0w3j0gknmzee20vs.jpg" width="300px" alt="Boda Roja - Juego de Tronos"/>
+                <p>¿Quién cayó primero en la <strong style="color: red">Boda Roja</strong>?</p>
+                <form id="form-question-12">
+                    <input type="radio" name="question2" id="talisa" value="correct" class="okidoki" required>
+                    <label for="talisa">Talisa Stark</label><br/>
+                    <input type="radio" name="question2" id="robb" value="wrong" required>
+                    <label for="robb">Robb Stark</label><br/>
+                    <input type="radio" name="question2" id="catelyn" value="wrong" required>
+                    <label for="catelyn">Catelyn Stark</label>
+                </form>
+                <button id="next-12">Siguiente</button>
+            </div>
+        </div>
+        <div class="container">    
+            <div id="question-13" style="display: none">
+                <img src="https://amp.businessinsider.com/images/574f0ff8dd089538058b4791-750-563.png" width="300px" alt="Catelyn Stark">
+                <p>¿Quién dio muerte a Catelyn Stark?</p>
+                <form id="form-question-13">
+                    <input type="radio" name="question3" id="roslin" value="wrong" required>
+                    <label for="roslin">Roslin Frey</label><br/>
+                    <input type="radio" name="question3" id="lothar" value="wrong" required>
+                    <label for="lothar">Lothar Frey</label><br/>
+                    <input type="radio" name="question3" id="walder" value="correct" class="okidoki" required>
+                    <label for="walder">Black Walder Rivers</label>
+                </form>
+                <button id="results-btn" type="submit">Resultados</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="results" style="display: none">
+                <p ><strong id="right-answers"></strong></p>
+                <div id="winner">
+                    <h2 id="winner-text"></h2>
+                </div>
+                <div id="loser">
+                    <h2 id="loser-text"></h2>
+                </div>
+                <button id="play-again">¿Juegas otra vez?</button>
+                <a href="https://vignette.wikia.nocookie.net/gameofthrones/images/b/b6/Blood_of_my_blood_House_Tarly_dinner.jpg/revision/latest?cb=20160729165111"><button id="sam">Me voy a comer con Sam</button></a>
+            </div>
+        </div>
+        <div class="container">
+            <div id="pregunta-1" style = "display: none;">
+                <img src="https://www.thesprucepets.com/thmb/SOFSqDcUVrBS0QKUNo30vPVuwHA=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-174186460-57b8bf623df78c8763bfc717.jpg" width="300px" alt="León">
+                <p>¿Cuál es el animal más grande del mundo?</p>
+                <input type="checkbox" value="correct" name="animal-1" id="ballena">
+                <label for="ballena">Ballena</label> <br/>
+                <input type="checkbox" value="incorrecta" name="animal-1" id="oso">
+                <label for="oso">Oso</label><br/>
+                <input type="checkbox" value="incorrecta" name="animal-1" id="tigre">
+                <label for="tigre">Tigre</label><br/>
+                <button id="boton-next-1">Siguiente</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="pregunta-2" style="display: none;">
+                <img src="https://timedotcom.files.wordpress.com/2018/04/learning-to-see-insects-film-1.jpg" width="300px" alt="Insecto">
+                <p>¿Cuántos hijos tiene una cucaracha?</p>
+                <input type="checkbox" value="correct" name="animal-2" id="doce">
+                <label for="doce">12 - 14</label> <br/>
+                <input type="checkbox" value="incorrecta" name="animal-2" id="quince">
+                <label for="quince">15 - 18</label> <br/>
+                <input type="checkbox" value="incorrecta" name="animal-2" id="dieciocho">
+                <label for="dieciocho">18 - 22</label> <br/>
+                <button id="boton-next-2">Siguiente</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="pregunta-3" style="display: none;">
+                <img src="http://animals.sandiegozoo.org/sites/default/files/2017-02/Serval_ZN.jpg" width="300px" alt="Serval">
+                <p>¿Cuál es el animal que tiene el oído muy desarrollado?</p>
+                <input type="checkbox" value="correct" name="animal-3" id="muercielago">
+                <label for="murcielago">Murciélago</label> <br/>
+                <input type="checkbox" value="incorrecta" name="animal-3" id="elefante">
+                <label for="elefante">Elefante</label> <br/>
+                <input type="checkbox" value="incorrecta" name="animal-3" id="caballo">
+                <label for="caballo">Caballo</label> <br/>
+                <button id="boton-next-3">Resultados</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="results-animals" style="display: none">
+                <p ><strong id="right-answers-animals"></strong></p>
+                <div id="winner">
+                    <h2 id="animal-text"></h2>
+                </div>
+                <button id="play-again-animals">¿Juegas otra vez?</button>
+            </div>
+        </div>
+        <script src="trivia-final.js"></script>
+    </body>
+</html>
